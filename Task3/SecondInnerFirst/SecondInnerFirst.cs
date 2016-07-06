@@ -8,7 +8,7 @@ namespace SecondInner
 {
     public static class SecondInnerFirst
     {
-        private const int MaxBit = 30;
+        private const int maxBit = 30;
         /// <summary>
         /// The method for inserting the second number of the first.
         /// </summary>
@@ -16,10 +16,10 @@ namespace SecondInner
         /// <param name="second">The second value.</param>
         /// <param name="endPos">Start number of bit.</param>
         /// <param name="startPos">End number of bit.</param>
-        /// <returns></returns>
+        /// <returns>Vavue contein second number insert to first</returns>
         public static int InsertMethod(int first, int second, int endPos, int startPos)
         {
-            if (startPos < 0 || endPos > MaxBit)
+            if (startPos < 0 || endPos > maxBit)
             {
                 throw new ArgumentOutOfRangeException();
             }
@@ -29,7 +29,7 @@ namespace SecondInner
             int sizeInsert = (int)(Math.Pow(2, endPos - startPos + 1) - 1);
             second = second & sizeInsert;
             second = second << startPos;
-
+            int[][] mass=new int[3][];
             return first | second;
 
         }
