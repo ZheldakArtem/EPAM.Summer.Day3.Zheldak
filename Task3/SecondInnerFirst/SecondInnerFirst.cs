@@ -29,7 +29,6 @@ namespace SecondInner
             int sizeInsert = (int)(Math.Pow(2, endPos - startPos + 1) - 1);
             second = second & sizeInsert;
             second = second << startPos;
-            int[][] mass=new int[3][];
             return first | second;
 
         }
